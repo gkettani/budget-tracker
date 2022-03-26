@@ -1,1 +1,3 @@
-#React budget tracking App
+# React budget tracking App
+
+![app preview](./public/app_preview.png)
