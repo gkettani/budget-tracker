@@ -2,7 +2,6 @@
     margin: 10px 0;
     color: #000;
     list-style: none;
-    position: relative;
     display: flex;
     justify-content: space-between;
 }
@@ -11,10 +10,15 @@
 .transaction__container{
     display: flex;
     justify-content: space-between;
-    width: 82%;
+    width: 83%;
     background-color: #FFF;
     padding: 0 4%;
-    box-shadow: 0 0 5px 1px rgba(0,0,0,.1);
+    transition: all .5s;
+}
+
+.transaction__container:hover{
+    background-color: rgb(230, 230, 230);
+    cursor: pointer;
 }
 
 .delete-btn{
@@ -29,19 +33,10 @@
     cursor: pointer;
 }
 
-
-#stateColor{
-    position: absolute;
-    right: 10%;
-    top: 0;
-    width: 8px;
-    height: 100%;
-}
-
 .transaction--green{
-    background-color: #080;
+    border-right: 8px solid #080;
 }
 
 .transaction--red{
-    background-color: #E00;
+    border-right: 8px solid #E00;
 }
