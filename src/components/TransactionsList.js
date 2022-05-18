@@ -1,7 +1,9 @@
 import Transaction from "./Transaction"
 
 export default function TransactionsList(props) {
-    let transactions = props.transactions;
+  
+  let transactions = props.transactions;
+  
   return (
     <div className ="transactionsList">
         <h3> History </h3>
@@ -9,12 +11,12 @@ export default function TransactionsList(props) {
         <ul style={{padding: '0'}}>
             {transactions.map(transaction => (
                 <Transaction 
-                key={transaction.id}
-                id={transaction.id}
-                description={transaction.description}
-                value={transaction.value}
+                key={transaction._id}
+                id={transaction._id}
+                description={transaction.text}
+                value={transaction.amount}
                 onDelete={id => props.handleDelete(id)}
-                />))}
+              />))}
         </ul>
     </div>
   )
